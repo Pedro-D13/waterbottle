@@ -32,12 +32,16 @@ public class WaterBottle {
     }
 
     public void fillWaterBottle() {
-        System.out.println("Filling bottle");
-        for (waterLevel lvls : waterLevel.values()) {
-            System.out.println(lvls);
-            level = lvls;
+        if (closed) {
+            System.out.println("Cannot fill bottle since lid is closed :(");
+        } else {
+            System.out.println("Filling bottle");
+            for (waterLevel lvls : waterLevel.values()) {
+                System.out.println(lvls);
+                level = lvls;
+            }
+            System.out.printf("Water bottle is currently , %s", level);
         }
-        System.out.printf("Water bottle is currently , %s", level);
     }
 
     public void drinkWater() {

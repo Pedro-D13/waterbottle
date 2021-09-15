@@ -2,14 +2,6 @@ package com.company;
 
 
 public class Main {
-    public enum waterLevel {
-        EMPTY,
-        ALMOST_EMPTY,
-        HALF_FULL,
-        ALMOST_FULL,
-        FULL
-    }
-
     public static void main(String[] args) {
         WaterBottle myBottle = new WaterBottle();
         myBottle.openBottle();
@@ -19,6 +11,16 @@ public class Main {
             myBottle.drinkWater();
             System.out.println(myBottle.level);
         }
+        myBottle.closeBottle();
+        myBottle.fillWaterBottle();
+    }
+
+    public enum waterLevel {
+        EMPTY,
+        ALMOST_EMPTY,
+        HALF_FULL,
+        ALMOST_FULL,
+        FULL
     }
 
 
